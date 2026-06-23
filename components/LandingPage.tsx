@@ -208,10 +208,21 @@ export default function LandingPage() {
 
           {/* Navbar Right Actions */}
           <div className="hidden md:flex items-center gap-4">
+            {/* Developer Info */}
+            <div className={`flex items-center gap-2 px-3 py-1.5 rounded-full border text-[10px] font-bold ${
+              dark 
+                ? 'bg-zinc-950/40 border-zinc-800 text-zinc-300' 
+                : 'bg-zinc-50 border-zinc-200 text-zinc-650'
+            }`}>
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+              <span>Dev: Dhanush Gowda G</span>
+              <span className="opacity-40">|</span>
+              <a href="mailto:dh4nushgowd4@gmail.com" className="hover:underline text-purple-600 dark:text-purple-400">dh4nushgowd4@gmail.com</a>
+            </div>
             <button
               onClick={toggleTheme}
               className={`p-2 rounded-lg transition-colors ${
-                dark ? 'text-zinc-400 hover:text-white hover:bg-zinc-900' : 'text-zinc-500 hover:text-zinc-900 hover:bg-zinc-100'
+                dark ? 'text-zinc-400 hover:text-white hover:bg-zinc-900' : 'text-zinc-505 hover:text-zinc-900 hover:bg-zinc-100'
               }`}
               aria-label="Toggle Theme"
             >
@@ -313,6 +324,21 @@ export default function LandingPage() {
                 </a>
 
                 <div className="h-px w-full my-2 bg-zinc-800/30" />
+
+                {/* Mobile Developer Info */}
+                <div className={`w-full flex flex-col gap-1 p-3 rounded-xl border text-[10px] font-bold ${
+                  dark 
+                    ? 'bg-zinc-950/40 border-zinc-900 text-zinc-300' 
+                    : 'bg-zinc-50 border-zinc-200 text-zinc-650'
+                }`}>
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full bg-purple-500 animate-pulse" />
+                    <span>Developer: Dhanush Gowda G</span>
+                  </div>
+                  <a href="mailto:dh4nushgowd4@gmail.com" className="hover:underline text-purple-650 dark:text-purple-400 mt-0.5">
+                    Email: dh4nushgowd4@gmail.com
+                  </a>
+                </div>
 
                 <div className="flex items-center gap-4">
                   <Link

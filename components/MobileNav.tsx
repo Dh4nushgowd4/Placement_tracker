@@ -63,14 +63,19 @@ export function MobileNav({ activeTab, onTabChange, totalCount, userName = 'Dhan
   return (
     <>
       {/* Mobile Top Bar */}
-      <div className="lg:hidden glass border-b border-white/5 px-4 py-3 flex items-center justify-between bg-[#050816]/90 backdrop-blur-md">
+      <div className="lg:hidden glass border-b border-white/5 px-4 py-2.5 flex items-center justify-between bg-[#050816]/90 backdrop-blur-md">
         <div className="flex items-center gap-3">
           <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-purple-600 to-indigo-600 flex items-center justify-center">
             <Zap size={14} className="text-white" />
           </div>
           <div>
-            <span className="text-xs font-black text-white">Placement</span>
-            <span className="text-xs font-extrabold text-purple-500 ml-1">Tracker Pro</span>
+            <div className="flex items-center">
+              <span className="text-xs font-black text-white">Placement</span>
+              <span className="text-xs font-extrabold text-purple-500 ml-1">Tracker Pro</span>
+            </div>
+            <p className="text-[8px] text-slate-400 font-semibold mt-0.5 leading-none">
+              Dev: Dhanush Gowda G · <a href="mailto:dh4nushgowd4@gmail.com" className="underline text-purple-400">dh4nushgowd4@gmail.com</a>
+            </p>
           </div>
         </div>
         <button

@@ -27,7 +27,7 @@ export default function LoginPage() {
     if (!profile) {
       profile = getDefaultProfile();
       profile.email = email;
-      profile.fullName = email.split('@')[0];
+      profile.fullName = email === 'dh4nushgowd4@gmail.com' ? 'Dhanush Gowda G' : email.split('@')[0];
       saveUserProfile(profile);
     }
     if (remember) localStorage.setItem('ptp_remember', 'true');

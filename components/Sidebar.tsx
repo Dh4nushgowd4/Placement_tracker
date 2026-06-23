@@ -166,29 +166,6 @@ export function Sidebar({
       {/* User profile & footer indicators */}
       <div className={`p-4 border-t border-white/5 space-y-3 flex flex-col ${isCollapsed ? 'items-center' : ''}`}>
         
-        {/* User Card */}
-        <div className={`p-2 w-full rounded-xl border border-white/5 bg-zinc-950/20 relative group ${isCollapsed ? 'flex justify-center p-1 w-11 h-11 cursor-pointer' : ''}`}>
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-purple-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xs shadow-lg shadow-purple-500/10 flex-shrink-0">
-              {userName.substring(0, 2).toUpperCase()}
-            </div>
-            {!isCollapsed && (
-              <div className="min-w-0 text-left">
-                <p className="text-[10px] font-bold text-white truncate">{userName}</p>
-                <p className="text-[8px] text-slate-550 truncate mt-0.5">{userEmail}</p>
-              </div>
-            )}
-          </div>
-
-          {/* User profile hover details for collapsed mode */}
-          {isCollapsed && (
-            <div className="absolute left-16 top-1/2 -translate-y-1/2 bg-[#111827] border border-white/5 p-2.5 rounded-lg text-[9px] font-bold text-white shadow-2xl pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity z-50 whitespace-nowrap ml-1 flex flex-col gap-0.5">
-              <span>{userName}</span>
-              <span className="text-[8px] text-slate-500 font-medium">{userEmail}</span>
-            </div>
-          )}
-        </div>
-
         {/* Digital Heroes Link */}
         <a
           href="https://digitalheroesco.com"

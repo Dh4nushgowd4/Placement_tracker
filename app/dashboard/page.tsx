@@ -288,6 +288,14 @@ export default function DashboardPage() {
               </button>
             </div>
 
+            {/* Developer Contact Info Badge */}
+            <div className="hidden md:flex items-center gap-2 bg-gradient-to-r from-purple-500/10 to-indigo-500/10 border border-purple-500/20 px-3.5 py-1.5 rounded-xl text-xs font-semibold text-purple-300">
+              <span className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
+              <span>Developer: Dhanush Gowda G</span>
+              <span className="opacity-30">|</span>
+              <a href="mailto:dh4nushgowd4@gmail.com" className="text-purple-400 hover:text-purple-300 transition-colors underline">dh4nushgowd4@gmail.com</a>
+            </div>
+
             <div className="flex items-center gap-3">
               {/* Notification Bell */}
               <div className="relative">
@@ -666,6 +674,19 @@ export default function DashboardPage() {
                             setProfile(updated);
                           }}
                         />
+                      </div>
+                    </div>
+
+                    {/* Developer Credit */}
+                    <div className="pt-2">
+                      <div className="h-px bg-white/5 my-3" />
+                      <h4 className="text-[11px] font-bold text-slate-400 mb-1">Developer Contact</h4>
+                      <p className="text-[10px] text-slate-500 leading-relaxed">
+                        If you need to contact the developer, please reach out to:
+                      </p>
+                      <div className="mt-2 p-2.5 rounded-lg bg-white/3 border border-white/5 flex items-center justify-between text-xs">
+                        <span className="font-semibold text-slate-200">Dhanush Gowda G</span>
+                        <a href="mailto:dh4nushgowd4@gmail.com" className="text-purple-400 hover:text-purple-300 underline font-bold">dh4nushgowd4@gmail.com</a>
                       </div>
                     </div>
                   </div>

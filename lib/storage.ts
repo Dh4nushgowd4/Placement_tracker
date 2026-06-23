@@ -213,7 +213,14 @@ export function markAllNotificationsRead(): void {
 
 const PROFILE_KEY = 'ptp_profile';
 
-export function getUserProfile(): UserProfile | null { return getSingle<UserProfile>(PROFILE_KEY); }
+export function getUserProfile(): UserProfile | null {
+  const p = getSingle<UserProfile>(PROFILE_KEY);
+  if (p && p.email === 'dh4nushgowd4@gmail.com' && (!p.fullName || p.fullName === 'dh4nushgowd4')) {
+    p.fullName = 'Dhanush Gowda G';
+    setSingle(PROFILE_KEY, p);
+  }
+  return p;
+}
 
 export function saveUserProfile(profile: UserProfile): void { setSingle(PROFILE_KEY, profile); }
 
